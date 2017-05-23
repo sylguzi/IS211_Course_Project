@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+{% block body %}
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/login.css') }}">
+  <h2>Login Form</h2>
+  <form action="/login" method="POST">
+    <div class="container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="name" required>
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+      
+      <button type="submit">Login</button>
+    </div>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="container error">
+          {% for message in messages %}
+            {{ message }}
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+</form>
+{% endblock %}

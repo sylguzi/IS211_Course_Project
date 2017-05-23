@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/table.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/styles.css') }}" />
+    <title>Course project</title>
+  </head>
+  <body>
+    <ul class="metanav">
+      <li class="nav nav-left"><a class="nav-link" href="/">Home</a></li>
+      {% if not session.logged_in %}
+        <li class="nav nav-left"><a class="nav-link" href="/login">Log in</a></li>
+        <li class="nav nav-right"><a class="nav-link" href="/register">Register</a></li>
+      {% else %}
+        <li class="nav nav-left"><a class="nav-link" href="/dashboard">Dashboard</a></li>
+        <li class="nav nav-left"><a class="nav-link" href="/post/create">Add post</a></li>
+        <li class="nav nav-left"><a class="nav-link" href="/logout">Log out</a></li>
+        <li class="nav nav-right">Hello {{ session.user.name }}</li>
+      {% endif %}
+    </ul>
+    {% block body %}
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <div class="container error">
+            {% for message in messages %}
+              {{ message }}
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endwith %}
+      {% for post in posts %}
+        <table class="layout display responsive-table">
+            <tbody>
+              <tr>
+                <td style="width: 20%">{{ post.date }}</td>
+                <td style="width: 80%"><a href="/post/{{ post.id }}">{{ post.title }}</a></td>
+              </tr>
+              <tr>
+                  <td colspan=2>
+                    {{ post.post }}
+                  </td>
+              </tr>
+            </tbody>
+        </table>
+      {% endfor %}
+    {% endblock %}
+  </body>
+</html>

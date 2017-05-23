@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% block body %}
+    <table class="layout display responsive-table">
+        <tbody>
+            <tr>
+                <td style="width: 20%">{{ post.date }}</td>
+                <td style="width: 80%"><a href="/post/{{ post.id }}">{{ post.title }}</a></td>
+            </tr>
+            <tr>
+                <td colspan=2>
+                    {{ post.post }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
