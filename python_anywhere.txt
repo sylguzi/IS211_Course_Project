@@ -1,0 +1,15 @@
+PythonAnywhere direct links (can't seem to share entire directories):
+Course Project: https://www.pythonanywhere.com/user/sylguzi/shares/df6446a6093d465b9f3874fcd014586b/
+[static > styles]
+login: https://www.pythonanywhere.com/user/sylguzi/shares/2103da61c6944b769dd64e3f3565c5d9/
+post: https://www.pythonanywhere.com/user/sylguzi/shares/bd12d57aacd941739fa2277633ad7100/
+styles: https://www.pythonanywhere.com/user/sylguzi/shares/5d767720c0304b528c9cd976d91b9413/
+table: https://www.pythonanywhere.com/user/sylguzi/shares/3b2d1630737249ba82ea7968260b6f24/
+[templates]
+dashboard: https://www.pythonanywhere.com/user/sylguzi/shares/7216619b3d5d43698b0d9caf6a58dd06/
+edit_post: https://www.pythonanywhere.com/user/sylguzi/shares/439142f9c337433fa31cb6b07090d368/
+index: https://www.pythonanywhere.com/user/sylguzi/shares/770ad71cb883419d9e4eddff641b0186/
+login: https://www.pythonanywhere.com/user/sylguzi/shares/4f2b9651aaef4f03934d0a4c7fdde632/
+post: https://www.pythonanywhere.com/user/sylguzi/shares/7ea9ede870074170a5300b62e4bd47f3/
+register: https://www.pythonanywhere.com/user/sylguzi/shares/a48fcdcc1f1a4418a890b6a9d50a7a8a/
+
